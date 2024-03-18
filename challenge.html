@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Rounds Played: </h4><h4 id="rounds">0</h4>
+    <h4>Current total: </h4><h4 id="total">0</h4>
+    <h4>Rounds average: </h4><h4 id="avg">0</h4>
+    <button class="btn" onclick="handleClick1()">Score 1 </button>
+    <button class="btn" onclick="handleClick2()">Score 2 </button>
+    <button class="btn" onclick="handleClick3()">Score 3 </button>
+
+    <script>
+        let i=0;
+        let score =0;
+        let avg=0;
+        const handleClick1=()=>{
+            if(i>=9){
+              
+           document.querySelectorAll("button").forEach((button)=>button.disabled=true)  
+            }
+            i++;
+            score++;
+            avg=score/i;
+            console.log(i,score,avg)
+            document.getElementById("rounds").innerText=i
+            document.getElementById("total").innerText=score
+            document.getElementById("avg").innerText=avg
+        }
+        const handleClick2=()=>{
+            if(i>=9){
+              
+              document.querySelectorAll("button").forEach((button)=>button.disabled=true)  
+               }
+            i++;
+            score=score+2;
+            avg=score/i;
+            
+            console.log(i,score,avg)
+            document.getElementById("rounds").innerText=i
+            document.getElementById("total").innerText=score
+            document.getElementById("avg").innerText=avg
+        }
+        const handleClick3=()=>{
+            if(i>=9){
+              
+              document.querySelectorAll("button").forEach((button)=>button.disabled=true)  
+               }
+            i++;
+            score=score+3;
+            avg=score/i;
+            document.getElementById("rounds").innerText=i
+            document.getElementById("total").innerText=score
+            document.getElementById("avg").innerText=avg
+            
+            console.log(i,score,avg)
+        }
+         
+    </script>
+
+</body>
+</html>

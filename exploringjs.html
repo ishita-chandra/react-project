@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning JS</h1>
+    <script>
+        console.log("Hello")
+        let age=21;
+        console.log(age)
+        console.log(typeof(age))
+        age="21"
+        console.log(age)
+        console.log(typeof(age))
+
+        const name='sonal'
+        console.log(name)
+        // name = "Thomas"
+
+        const roomsize = '22';
+        const trainer = 'Thomas\'s room'
+        console.log(roomsize)
+        console.log(trainer)
+        const thisYear = "2024"
+        const nextYear = +thisYear+1;
+        console.log(nextYear)
+
+        //template-string
+        const displaymsg = `${trainer} has ${roomsize} participants`
+        console.log(displaymsg)
+
+        const nextnextyear = `${+thisYear+2}`
+        console.log(nextnextyear)
+
+
+        console.log(trainer.charAt(5));
+        console.log(trainer.toUpperCase())
+        console.log(thisYear.length) 
+        console.log('position of s in owner is', trainer.indexOf('s'));
+
+        // arrays
+
+        const colours = ["red","green","blue"]
+        console.log(colours)
+        const colors2 = new Array ('red','green','blue')
+        console.log(colors2)
+        console.log(colours[1])
+        console.log(colours.len0gth)
+
+        colours.push('yellow')
+        console.log(colours)
+
+        const colorpop=colours.pop()
+        console.log(colours)
+        console.log(colorpop)
+
+        //lambda
+
+
+        //map - returns a new array with same no. of elements as original array after applying the transformation
+        const myUppercaseColours= colours.map((colour) => colour.toUpperCase())
+        console.log(myUppercaseColours)
+
+        //filter- returns a new array with only elements which return true for the condition specified
+        const colorswithr = colours.filter((colour)=> colour.includes('r'));
+        console.log(colorswithr)
+
+        const colorswith4ormore = colours.filter(colour => (colour.length>=4))
+        console.log(colorswith4ormore) 
+
+        // findIndex returns index of first element that matches the condition
+        console.log(colours)
+        const colorindex= colours.findIndex((colour)=> colour ==='green')
+        console.log(colorindex)
+
+        //find returns first element that matches the condition
+        console.log(colours)
+        const colorchosen = colours.find((color=> color==='green'));
+        console.log(colorchosen)
+
+        const newarr = [10,20,30]
+        newarr[3]=40;
+        console.log(newarr)
+
+        //const for array cant reassign to a new variable but can add /delete/change elements
+        
+
+         for( const color of colours)
+         {
+            console.log(color)
+         }
+
+         for( let i=0;i<3;++i)
+         {
+            console.log(colours[i])
+         }
+         for(let i =0; i <colours.length;++i)
+         {
+            console.log(colours[i]);
+         }
+         for(let i=0;i<colours.length;++i)
+         {
+            console.log(`index is ${i}, colour is ${colours[i]}`)
+         }
+         let color = "green";
+         if(color=="RED")
+         {
+            console.log("The colour is red");
+         }
+         else{
+            console.log("its green")
+         }
+
+         switch(color)
+         {
+            case "RED":
+                console.log("its red")
+                break;
+            default: 
+                console.log("green")
+                break;
+
+         }
+         color = 'blue'
+         console.log(color=="RED"?"its red":"its not red")
+         //objects
+         const person = {
+            name : "matt",
+            age:26,
+            food:["pizza","pasta"],
+            preferences: [{colour:'blue'},{season:'summer'}]
+
+         }
+         console.log(person.preferences[1].season)
+         person.food.push("maggi")
+         console.log(person.food[2])
+         person.location = "london"
+         console.log(person)
+
+
+         //functions
+
+         function sayHello(firstname,surname){
+            return ('hello '+firstname+' '+surname)
+         }
+         const sayHello1= (firstname,surname)=> 'hello '+firstname+' '+surname;
+         const sayHello2 = (firstname,surname)=> {return 'hello '+firstname+' '+surname};
+         console.log(sayHello("ishita","chandra"))
+
+
+
+    </script>
+</body>
+</html>
